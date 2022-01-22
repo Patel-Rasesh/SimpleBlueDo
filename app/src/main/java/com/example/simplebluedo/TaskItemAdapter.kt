@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 /**
- * Adapters are view orchestrator
+ * Adapters are view orchestrator - trial GIT commit
  */
 class TaskItemAdapter (val listOfItems : List<String>,
                        val longClickListener: OnLongClickListener) :
