@@ -35,10 +35,16 @@ class MainActivity : AppCompatActivity() {
             }
         }
         loadItems()
+        val onClickListener = object : TaskItemAdapter.OnClickListener{
+            override fun itemClicked(position: Int) {
+                Log.i("Clon", "User has clicked once"+position)
+                //listOfTasks.get(position)
+            }
+        }
         // Lookup the recyclerview in activity layout
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         // Create adapter passing in the sample user data
-        adapter = TaskItemAdapter(listOfTasks, onLongClickListener)
+        adapter = TaskItemAdapter(listOfTasks, onLongClickListener, onClickListener)
         // Attach the adapter to the recyclerview to populate items
         recyclerView.adapter = adapter
         // Set layout manager to position the items
@@ -70,6 +76,7 @@ class MainActivity : AppCompatActivity() {
     fun loadItems(){
         try {
             listOfTasks = org.apache.commons.io.FileUtils.readLines(getDataFile(), Charset.defaultCharset())
+
         }catch (ioException : IOException){
             ioException.printStackTrace()
         }

@@ -12,11 +12,15 @@ import androidx.recyclerview.widget.RecyclerView
  * Adapters are view orchestrator - trial GIT commit
  */
 class TaskItemAdapter (val listOfItems : List<String>,
-                       val longClickListener: OnLongClickListener) :
+                       val longClickListener: OnLongClickListener,
+                       val clickListener: OnClickListener) :
     RecyclerView.Adapter<TaskItemAdapter.ViewHolder>(){
 
     interface OnLongClickListener{
         fun itemLongClicked(position : Int)
+    }
+    interface OnClickListener{
+        fun itemClicked(position : Int)
     }
 
     // Usually involves inflating a layout from XML and returning the holder
@@ -53,6 +57,10 @@ class TaskItemAdapter (val listOfItems : List<String>,
             textView = itemView.findViewById(android.R.id.text1)
             itemView.setOnLongClickListener{
                 longClickListener.itemLongClicked(adapterPosition)
+                true
+            }
+            itemView.setOnClickListener{
+                clickListener.itemClicked(adapterPosition)
                 true
             }
         }
