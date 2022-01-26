@@ -1,9 +1,11 @@
 package com.example.simplebluedo
 
+import android.content.Intent
 import android.hardware.biometrics.BiometricManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.FileUtils
+import android.preference.PreferenceManager
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
@@ -37,10 +39,18 @@ class MainActivity : AppCompatActivity() {
         loadItems()
         val onClickListener = object : TaskItemAdapter.OnClickListener{
             override fun itemClicked(position: Int) {
-                Log.i("Clon", "User has clicked once"+position)
-                //listOfTasks.get(position)
+                //Log.i("Clon", "User has clicked once"+position)
+                // Create an activity
+                val i = Intent(this@MainActivity, EditScreen::class.java)
+                // Send edited data
+                i.putExtra("item_text", listOfTasks.get(position))
+                i.putExtra("item_position", position)
+                // Display with updated data
+                startActivityForResult(i, 20)
+
             }
         }
+        
         // Lookup the recyclerview in activity layout
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         // Create adapter passing in the sample user data
