@@ -1,37 +1,18 @@
-## Welcome to GitHub Pages
+Project 1 - SimpleBlueDo
+It is an android app that allows building a todo list and basic todo items management functionality including adding new items, editing and deleting an existing item.
 
-You can use the [editor on GitHub](https://github.com/Patel-Rasesh/SimpleBlueDo/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Submitted by: Rasesh Patel
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Time spent: 5 hours spent in total
 
-### Markdown
+User Stories
+The following required functionality is completed:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+ User can view a list of todo items
+ User can successfully add and remove items from the todo list
+ User's list of items persisted upon modification and and retrieved properly on app restart
+The following optional features are implemented:
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Patel-Rasesh/SimpleBlueDo/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Notes
+Describe any challenges encountered while building the app.
